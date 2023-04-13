@@ -1,0 +1,6 @@
+13:50:19 **** Clean-only build of configuration Nios II for project synthesizer ****
+make clean 
+[synthesizer clean complete]
+
+13:50:20 Build Finished (took 228ms)
+

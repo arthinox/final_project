@@ -1,0 +1,6 @@
+13:50:16 **** Clean-only build of configuration Nios II for project synthesizer_bsp ****
+make clean 
+[BSP clean complete]
+
+13:50:17 Build Finished (took 738ms)
+
