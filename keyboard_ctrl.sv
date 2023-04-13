@@ -1,12 +1,12 @@
-module keyboard_ctrl {
+module keyboard_ctrl (
 	input [7:0] keycode,
 	input clk,
 	
-	output 	logic flat,
-				logic [2:0] note,
-				logic [2:0] octave
-				logic instrument
-};
+	output 	flat, instrument,
+	output	[2:0] note,
+	output	[2:0] octave
+				
+);
 
 // Code that takes keyboard input and converts into data used by waveform generator
 
@@ -29,7 +29,7 @@ always_ff @ (posedge clk)
 //////////////////////// NOTES ////////////////////////
 always_comb
 	begin
-		case (keycode) begin
+		case (keycode) 
 		
 			8'h1d: // z: c1
 				begin
@@ -260,7 +260,7 @@ always_comb
 					flat = 1;
 				end
 			
-		end
+		endcase
 	end
 
 endmodule

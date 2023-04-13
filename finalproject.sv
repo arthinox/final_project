@@ -1,7 +1,7 @@
 // Digital Synthesizer
 // Top-Level Module
 
-module top_level{
+module top_level(
       ///////// Clocks /////////
       input     MAX10_CLK1_50, 
 
@@ -39,7 +39,7 @@ module top_level{
       inout    [15: 0]   ARDUINO_IO,
       inout              ARDUINO_RESET_N 
 	
-};
+);
 
 
 
@@ -85,7 +85,7 @@ module top_level{
 	assign ARDUINO_IO[1] = I2S_DOUT;
 
 	// generate 12.5MHz CODEC mclk
-	always_ff @ (posedge MAX10_CLK2_50) begin
+	always_ff @ (posedge MAX10_CLK1_50) begin
 		I2C_MCLK <= I2C_MCLK + 1;
 	end
 	
@@ -156,13 +156,13 @@ module top_level{
 		
 	 );
 
-i2s i2s0 {
+i2s i2s0 (
 	.I2S_MCLK(MAX10_CLK1_50),
 	.I2S_SCLK,
 	.I2S_LRCLK, 
 	.I2S_DIN,
 	.I2S_DOUT
-};
+);
 
 
 endmodule
