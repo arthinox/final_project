@@ -93,7 +93,7 @@ void printSignedHex1(signed char value)
 }
 
 
-int main()
+int test()
 {
 	ALT_AVALON_I2C_DEV_t *i2c_dev; //pointer to instance structure
 	//get a pointer to the Avalon i2c instance

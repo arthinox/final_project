@@ -1,6 +1,10 @@
 
 module finalproject (
 	clk_clk,
+	i2c_sda_in,
+	i2c_scl_in,
+	i2c_sda_oe,
+	i2c_scl_oe,
 	key_external_connection_export,
 	keycode_export,
 	reset_reset_n,
@@ -17,12 +21,13 @@ module finalproject (
 	usb_gpx_export,
 	usb_irq_export,
 	usb_rst_export,
-	i2c_sda_in,
-	i2c_scl_in,
-	i2c_sda_oe,
-	i2c_scl_oe);	
+	hex_digits_export);	
 
 	input		clk_clk;
+	input		i2c_sda_in;
+	input		i2c_scl_in;
+	output		i2c_sda_oe;
+	output		i2c_scl_oe;
 	input	[1:0]	key_external_connection_export;
 	output	[7:0]	keycode_export;
 	input		reset_reset_n;
@@ -39,8 +44,5 @@ module finalproject (
 	input		usb_gpx_export;
 	input		usb_irq_export;
 	output		usb_rst_export;
-	input		i2c_sda_in;
-	input		i2c_scl_in;
-	output		i2c_sda_oe;
-	output		i2c_scl_oe;
+	output	[15:0]	hex_digits_export;
 endmodule

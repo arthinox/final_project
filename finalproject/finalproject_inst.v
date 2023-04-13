@@ -1,5 +1,9 @@
 	finalproject u0 (
 		.clk_clk                        (<connected-to-clk_clk>),                        //                     clk.clk
+		.i2c_sda_in                     (<connected-to-i2c_sda_in>),                     //                     i2c.sda_in
+		.i2c_scl_in                     (<connected-to-i2c_scl_in>),                     //                        .scl_in
+		.i2c_sda_oe                     (<connected-to-i2c_sda_oe>),                     //                        .sda_oe
+		.i2c_scl_oe                     (<connected-to-i2c_scl_oe>),                     //                        .scl_oe
 		.key_external_connection_export (<connected-to-key_external_connection_export>), // key_external_connection.export
 		.keycode_export                 (<connected-to-keycode_export>),                 //                 keycode.export
 		.reset_reset_n                  (<connected-to-reset_reset_n>),                  //                   reset.reset_n
@@ -16,9 +20,6 @@
 		.usb_gpx_export                 (<connected-to-usb_gpx_export>),                 //                 usb_gpx.export
 		.usb_irq_export                 (<connected-to-usb_irq_export>),                 //                 usb_irq.export
 		.usb_rst_export                 (<connected-to-usb_rst_export>),                 //                 usb_rst.export
-		.i2c_sda_in                     (<connected-to-i2c_sda_in>),                     //                     i2c.sda_in
-		.i2c_scl_in                     (<connected-to-i2c_scl_in>),                     //                        .scl_in
-		.i2c_sda_oe                     (<connected-to-i2c_sda_oe>),                     //                        .sda_oe
-		.i2c_scl_oe                     (<connected-to-i2c_scl_oe>)                      //                        .scl_oe
+		.hex_digits_export              (<connected-to-hex_digits_export>)               //              hex_digits.export
 	);
 

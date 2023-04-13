@@ -162,7 +162,6 @@ module top_level (
 		
 		//LEDs and HEX
 		.hex_digits_export({hex_num_4, hex_num_3, hex_num_1, hex_num_0}),
-		.leds_export({hundreds, signs, LEDR}),
 		.keycode_export(keycode)
 		
 	 );
