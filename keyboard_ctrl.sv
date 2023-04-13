@@ -29,7 +29,7 @@ always_ff @ (posedge clk)
 //////////////////////// NOTES ////////////////////////
 always_comb
 	begin
-		case (keycode) 
+		case (keycode) begin
 		
 			8'h1d: // z: c1
 				begin
@@ -260,7 +260,7 @@ always_comb
 					flat = 1;
 				end
 			
-		endcase
+		end
 	end
 
 endmodule
