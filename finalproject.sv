@@ -1,7 +1,7 @@
 // Digital Synthesizer
 // Top-Level Module
 
-module top_level{
+module top_level (
       ///////// Clocks /////////
       input     MAX10_CLK1_50, 
 
@@ -39,7 +39,7 @@ module top_level{
       inout    [15: 0]   ARDUINO_IO,
       inout              ARDUINO_RESET_N 
 	
-};
+);
 
 
 
@@ -76,17 +76,28 @@ module top_level{
 	//Assign uSD CS to '1' to prevent uSD card from interfering with USB Host (if uSD card is plugged in)
 	assign ARDUINO_IO[6] = 1'b1;
 	
-	assign ARDUINO_IO[15] = I2C_SCLIN;
-	assign ARDUINO_IO[14] = I2C_SDAIN;
-	assign ARDUINO_IO[3] = I2S_MCLK;
+	//Connect I2C signals
+	assign I2C_SCLIN = ARDUINO_IO[15];
+	assign I2C_DAIN = ARDUINO_IO[14];
+
+	assign ARDUINO_IO[15] = I2C_SCLOE ? 1'b0 : 1'bZ;
+	assign ARDUINO_IO[14] = I2C_SDAOE ? 1'b0 : 1'bZ;
+
 	assign ARDUINO_IO[5] = I2S_SCLK;
 	assign ARDUINO_IO[4] = I2S_LRCLK;
-	assign ARDUINO_IO[2] = I2S_DIN;
-	assign ARDUINO_IO[1] = I2S_DOUT;
+//	assign ARDUINO_IO[2] = I2S_DIN;
+//	assign ARDUINO_IO[1] = I2S_DOUT;
+	
+	// Feed Data In to Data Out (comment out unless testing codec)
+	assign ARDUINO_IO[1] = 1'bZ;
+	assign ARDUINO_IO[2] = ARDUINO_IO[1];
 
+	logic [1:0] aud_mclk_ctr;
+	assign ARDUINO_IO[3] = aud_mclk_ctr[1];
+	
 	// generate 12.5MHz CODEC mclk
-	always_ff @ (posedge MAX10_CLK2_50) begin
-		I2C_MCLK <= I2C_MCLK + 1;
+	always_ff @ (posedge MAX10_CLK1_50) begin
+		aud_mclk_ctr <= aud_mclk_ctr + 1;
 	end
 	
 	//HEX drivers to convert numbers to HEX output
@@ -156,13 +167,13 @@ module top_level{
 		
 	 );
 
-i2s i2s0 {
-	.I2S_MCLK(MAX10_CLK1_50),
-	.I2S_SCLK,
-	.I2S_LRCLK, 
-	.I2S_DIN,
-	.I2S_DOUT
-};
+//i2s i2s0 (
+//	.I2S_MCLK(MAX10_CLK1_50),
+//	.I2S_SCLK,
+//	.I2S_LRCLK, 
+//	.I2S_DIN,
+//	.I2S_DOUT
+//);
 
 
 endmodule
