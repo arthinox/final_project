@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Apr 13, 2023 4:24:40 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1681421080311</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Apr 13, 2023 5:41:09 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1681425669689</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\oddly\OneDrive\Documents\GitHub\final_project\software\synthesizer_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\finalproject.sopcinfo</SopcDesignFile>
@@ -917,56 +917,68 @@
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>hex_digits_pio</slaveDescriptor>
-                <addressRange>0x00003170 - 0x0000317F</addressRange>
-                <addressSpan>16</addressSpan>
+                <slaveDescriptor>spi_0</slaveDescriptor>
+                <addressRange>0x00003120 - 0x0000313F</addressRange>
+                <addressSpan>32</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>key</slaveDescriptor>
-                <addressRange>0x00003180 - 0x0000318F</addressRange>
-                <addressSpan>16</addressSpan>
-                <attributes/>
-        </MemoryMap>
-        <MemoryMap>
-                <slaveDescriptor>usb_rst</slaveDescriptor>
-                <addressRange>0x00003190 - 0x0000319F</addressRange>
-                <addressSpan>16</addressSpan>
-                <attributes/>
-        </MemoryMap>
-        <MemoryMap>
-                <slaveDescriptor>usb_gpx</slaveDescriptor>
-                <addressRange>0x000031A0 - 0x000031AF</addressRange>
-                <addressSpan>16</addressSpan>
-                <attributes/>
-        </MemoryMap>
-        <MemoryMap>
-                <slaveDescriptor>usb_irq</slaveDescriptor>
-                <addressRange>0x000031B0 - 0x000031BF</addressRange>
-                <addressSpan>16</addressSpan>
-                <attributes/>
-        </MemoryMap>
-        <MemoryMap>
-                <slaveDescriptor>keycode</slaveDescriptor>
+                <slaveDescriptor>led</slaveDescriptor>
                 <addressRange>0x000031C0 - 0x000031CF</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
-                <slaveDescriptor>sdram_pll</slaveDescriptor>
+                <slaveDescriptor>hex_digits_pio</slaveDescriptor>
                 <addressRange>0x000031D0 - 0x000031DF</addressRange>
                 <addressSpan>16</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
+                <slaveDescriptor>key</slaveDescriptor>
+                <addressRange>0x000031E0 - 0x000031EF</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>usb_rst</slaveDescriptor>
+                <addressRange>0x000031F0 - 0x000031FF</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>usb_gpx</slaveDescriptor>
+                <addressRange>0x00003200 - 0x0000320F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>usb_irq</slaveDescriptor>
+                <addressRange>0x00003210 - 0x0000321F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>keycode</slaveDescriptor>
+                <addressRange>0x00003220 - 0x0000322F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
+                <slaveDescriptor>sdram_pll</slaveDescriptor>
+                <addressRange>0x00003230 - 0x0000323F</addressRange>
+                <addressSpan>16</addressSpan>
+                <attributes/>
+        </MemoryMap>
+        <MemoryMap>
                 <slaveDescriptor>sysid_qsys_0</slaveDescriptor>
-                <addressRange>0x000031F0 - 0x000031F7</addressRange>
+                <addressRange>0x00003250 - 0x00003257</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>jtag_uart_0</slaveDescriptor>
-                <addressRange>0x000031F8 - 0x000031FF</addressRange>
+                <addressRange>0x00003258 - 0x0000325F</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes>printable</attributes>
         </MemoryMap>

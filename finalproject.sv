@@ -85,7 +85,7 @@ module top_level (
 
 	assign ARDUINO_IO[5] = I2S_SCLK;
 	assign ARDUINO_IO[4] = I2S_LRCLK;
-//	assign ARDUINO_IO[2] = I2S_DIN;
+//	assign I2S_DIN = ARDUINO_IO[2];
 //	assign ARDUINO_IO[1] = I2S_DOUT;
 	
 	// Feed Data In to Data Out (comment out unless testing codec)
@@ -162,6 +162,7 @@ module top_level (
 		
 		//LEDs and HEX
 		.hex_digits_export({hex_num_4, hex_num_3, hex_num_1, hex_num_0}),
+		.led_wire_export({hundreds, signs, LEDR}),
 		.keycode_export(keycode)
 		
 	 );

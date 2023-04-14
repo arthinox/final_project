@@ -108,6 +108,38 @@
 					"strict" : false
 				},
 				{
+					"name" : "led_wire_export[0]",
+					"strict" : false
+				},
+				{
+					"name" : "led_wire_export[1]",
+					"strict" : false
+				},
+				{
+					"name" : "led_wire_export[2]",
+					"strict" : false
+				},
+				{
+					"name" : "led_wire_export[3]",
+					"strict" : false
+				},
+				{
+					"name" : "led_wire_export[4]",
+					"strict" : false
+				},
+				{
+					"name" : "led_wire_export[5]",
+					"strict" : false
+				},
+				{
+					"name" : "led_wire_export[6]",
+					"strict" : false
+				},
+				{
+					"name" : "led_wire_export[7]",
+					"strict" : false
+				},
+				{
 					"name" : "sdram_wire_addr[0]",
 					"strict" : false
 				},
@@ -189,6 +221,18 @@
 				},
 				{
 					"name" : "sdram_wire_we_n",
+					"strict" : false
+				},
+				{
+					"name" : "spi0_MOSI",
+					"strict" : false
+				},
+				{
+					"name" : "spi0_SCLK",
+					"strict" : false
+				},
+				{
+					"name" : "spi0_SS_n",
 					"strict" : false
 				},
 				{
@@ -289,6 +333,10 @@
 				},
 				{
 					"name" : "i2c_sda_in",
+					"strict" : false
+				},
+				{
+					"name" : "spi0_MISO",
 					"strict" : false
 				},
 				{
