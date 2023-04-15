@@ -1,5 +1,5 @@
 Flow report for lucky
-Mon Apr 03 20:44:09 2023
+Fri Apr 14 23:19:50 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,21 +40,21 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Mon Apr 03 20:44:09 2023       ;
+; Flow Status                        ; Successful - Fri Apr 14 23:19:50 2023       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; lucky                                       ;
 ; Top-level Entity Name              ; lab62                                       ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 4,001 / 49,760 ( 8 % )                      ;
-;     Total combinational functions  ; 3,423 / 49,760 ( 7 % )                      ;
-;     Dedicated logic registers      ; 2,435 / 49,760 ( 5 % )                      ;
-; Total registers                    ; 2504                                        ;
+; Total logic elements               ; 4,039 / 49,760 ( 8 % )                      ;
+;     Total combinational functions  ; 3,456 / 49,760 ( 7 % )                      ;
+;     Dedicated logic registers      ; 2,415 / 49,760 ( 5 % )                      ;
+; Total registers                    ; 2484                                        ;
 ; Total pins                         ; 141 / 360 ( 39 % )                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 11,392 / 1,677,312 ( < 1 % )                ;
-; Embedded Multiplier 9-bit elements ; 4 / 288 ( 1 % )                             ;
+; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                             ;
 ; Total PLLs                         ; 1 / 4 ( 25 % )                              ;
 ; UFM blocks                         ; 0 / 1 ( 0 % )                               ;
 ; ADC blocks                         ; 0 / 2 ( 0 % )                               ;
@@ -66,38 +66,45 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/03/2023 20:42:25 ;
+; Start date & time ; 04/14/2023 23:16:36 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; lucky               ;
 +-------------------+---------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                  ;
-+-------------------------------------+----------------------------------------+---------------+-------------------+----------------+
-; Assignment Name                     ; Value                                  ; Default Value ; Entity Name       ; Section Id     ;
-+-------------------------------------+----------------------------------------+---------------+-------------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 157223532328.168057254509308           ; --            ; --                ; --             ;
-; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl                      ; --            ; --                ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (SystemVerilog)        ; <None>        ; --                ; --             ;
-; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --                ; eda_simulation ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --                ; --             ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --                ; --             ;
-; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                      ; --            ; --                ; --             ;
-; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                      ; --            ; --                ; --             ;
-; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                             ; --            ; --                ; --             ;
-; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                             ; --            ; --                ; --             ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; DE10_LITE_Default ; Top            ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; lab62             ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; DE10_LITE_Default ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; lab62             ; Top            ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; DE10_LITE_Default ; Top            ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; lab62             ; Top            ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --                ; --             ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --                ; --             ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --                ; --             ;
-; TOP_LEVEL_ENTITY                    ; lab62                                  ; lucky         ; --                ; --             ;
-+-------------------------------------+----------------------------------------+---------------+-------------------+----------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                       ;
++-------------------------------------+-------------------------------------------------------------+---------------+-------------------+----------------+
+; Assignment Name                     ; Value                                                       ; Default Value ; Entity Name       ; Section Id     ;
++-------------------------------------+-------------------------------------------------------------+---------------+-------------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 238561869430156.168153219506776                             ; --            ; --                ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl                                           ; --            ; --                ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (SystemVerilog)                             ; <None>        ; --                ; --             ;
+; EDA_TIME_SCALE                      ; 1 ps                                                        ; --            ; --                ; eda_simulation ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                                          ; --            ; --                ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                                           ; --            ; --                ; --             ;
+; MISC_FILE                           ; lab62_soc/synthesis/../lab62_soc.cmp                        ; --            ; --                ; --             ;
+; MISC_FILE                           ; lab62_soc/synthesis/../../lab62_soc.qsys                    ; --            ; --                ; --             ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                                           ; --            ; --                ; --             ;
+; OUTPUT_IO_TIMING_FAR_END_VMEAS      ; Half Signal Swing                                           ; --            ; --                ; --             ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                                                  ; --            ; --                ; --             ;
+; OUTPUT_IO_TIMING_NEAR_END_VMEAS     ; Half Vccio                                                  ; --            ; --                ; --             ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family)                      ; --            ; DE10_LITE_Default ; Top            ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family)                      ; --            ; lab62             ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                      ; --            ; DE10_LITE_Default ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                      ; --            ; lab62             ; Top            ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                      ; --            ; DE10_LITE_Default ; Top            ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                      ; --            ; lab62             ; Top            ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                         ; --            ; --                ; --             ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                       ; --            ; --                ; --             ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                ; --            ; --                ; --             ;
+; SLD_FILE                            ; lab62_soc/synthesis/lab62_soc.regmap                        ; --            ; --                ; --             ;
+; SLD_FILE                            ; lab62_soc/synthesis/lab62_soc.debuginfo                     ; --            ; --                ; --             ;
+; SLD_INFO                            ; QSYS_NAME lab62_soc HAS_SOPCINFO 1 GENERATION_ID 1681431938 ; --            ; lab62_soc         ; --             ;
+; SOPCINFO_FILE                       ; lab62_soc/synthesis/../../lab62_soc.sopcinfo                ; --            ; --                ; --             ;
+; SYNTHESIS_ONLY_QIP                  ; On                                                          ; --            ; --                ; --             ;
+; TOP_LEVEL_ENTITY                    ; lab62                                                       ; lucky         ; --                ; --             ;
++-------------------------------------+-------------------------------------------------------------+---------------+-------------------+----------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -105,12 +112,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:40     ; 1.0                     ; 4981 MB             ; 00:00:21                           ;
-; Fitter               ; 00:00:32     ; 1.4                     ; 5726 MB             ; 00:00:15                           ;
-; Assembler            ; 00:00:04     ; 1.0                     ; 4704 MB             ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:14     ; 2.0                     ; 4884 MB             ; 00:00:10                           ;
-; EDA Netlist Writer   ; 00:00:05     ; 1.0                     ; 4726 MB             ; 00:00:01                           ;
-; Total                ; 00:01:35     ; --                      ; --                  ; 00:00:49                           ;
+; Analysis & Synthesis ; 00:01:27     ; 1.0                     ; 4979 MB             ; 00:00:44                           ;
+; Fitter               ; 00:01:09     ; 1.2                     ; 5789 MB             ; 00:00:41                           ;
+; Assembler            ; 00:00:05     ; 1.0                     ; 4706 MB             ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:12     ; 1.7                     ; 4885 MB             ; 00:00:06                           ;
+; EDA Netlist Writer   ; 00:00:04     ; 1.0                     ; 4726 MB             ; 00:00:01                           ;
+; Total                ; 00:02:57     ; --                      ; --                  ; 00:01:34                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -59,6 +59,8 @@ module lab62 (
 
 
 logic Reset_h, vssig, blank, sync, VGA_Clk;
+logic [9:0] blankk;
+
 
 
 //=======================================================
@@ -92,23 +94,77 @@ logic Reset_h, vssig, blank, sync, VGA_Clk;
 	
 	//Assign uSD CS to '1' to prevent uSD card from interfering with USB Host (if uSD card is plugged in)
 	assign ARDUINO_IO[6] = 1'b1;
+
+	
+	////////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////////
+	logic flat, instrument1, flat1, instrument2, flat2;
+	logic [2:0] note1, octave1, note2, octave2;
+	
+	keyboard_ctrl KC2 (	.input1(hex_num_1),
+								.input2(hex_num_0),
+								.clk(MAX10_CLK1_50),
+								.flat(flat2),
+								.instrument(instrument2),
+								.note(note2),
+								.octave(octave2));
+		
+	keyboard_ctrl KC1 (	.input1(hex_num_4),
+								.input2(hex_num_3),
+								.clk(MAX10_CLK1_50),
+								.flat(flat1),
+								.instrument(instrument1),
+								.note(note1),
+								.octave(octave1));
+	
+	// HDC numbers, notes, flat
+	HexDisplayConverter HDC5 (.In0(note1), .command(3'b000 + flat2), .Out0(HEX5[6:0]));
+	HexDisplayConverter HDC4 (.In0(note2), .command(3'b010), .Out0(HEX4[6:0]));
+	HexDisplayConverter HDC3 (.In0(octave2), .command(3'b100), .Out0(HEX3[6:0]));
+	
+	HexDisplayConverter HDC2 (.In0(note1), .command(3'b000 + flat1), .Out0(HEX2[6:0]));
+	HexDisplayConverter HDC1 (.In0(note1), .command(3'b010), .Out0(HEX1[6:0]));
+	HexDisplayConverter HDC0 (.In0(octave1), .command(3'b100), .Out0(HEX0[6:0]));
+	
+	always_comb
+		begin
+			if (instrument1 == 0)
+				LEDR = 10'b0000011111;
+			else if (instrument1 == 1)
+				LEDR = 10'b1111100000;
+			else 
+				LEDR = 10'b0000000000;
+		end
+	
+	
+	////////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////////
 	
 	//HEX drivers to convert numbers to HEX output
-	HexDriver hex_driver4 (hex_num_4, HEX4[6:0]);
-	assign HEX4[7] = 1'b1;
+//	HexDriver hex_driver4 (hex_num_4, HEX4[6:0]);
+//	
+//	
+//	HexDriver hex_driver3 (hex_num_3, HEX3[6:0]);
 	
-	HexDriver hex_driver3 (hex_num_3, HEX3[6:0]);
-	assign HEX3[7] = 1'b1;
 	
-	HexDriver hex_driver1 (hex_num_1, HEX1[6:0]);
-	assign HEX1[7] = 1'b1;
 	
-	HexDriver hex_driver0 (hex_num_0, HEX0[6:0]);
+//	HexDriver hex_driver1 (hex_num_2, HEX4[6:0]);
+//	HexDriver hex_driver0 (hex_num_1, HEX3[6:0]);
 	assign HEX0[7] = 1'b1;
+	assign HEX1[7] = 1'b1;
+	assign HEX2[7] = 1'b1;
+	assign HEX4[7] = 1'b1;
+	assign HEX3[7] = 1'b1;
+	assign HEX5[7] = 1'b1;
+	
+
+	
 	
 	//fill in the hundreds digit as well as the negative sign
-	assign HEX5 = {1'b1, ~signs[1], 3'b111, ~hundreds[1], ~hundreds[1], 1'b1};
-	assign HEX2 = {1'b1, ~signs[0], 3'b111, ~hundreds[0], ~hundreds[0], 1'b1};
+//	assign HEX5 = {1'b1, ~signs[1], 3'b111, ~hundreds[1], ~hundreds[1], 1'b1};
+//	assign HEX2 = {1'b1, ~signs[0], 3'b111, ~hundreds[0], ~hundreds[0], 1'b1};
+	////////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////////
 	
 	
 	//Assign one button to reset
@@ -153,44 +209,11 @@ logic Reset_h, vssig, blank, sync, VGA_Clk;
 		
 		//LEDs and HEX
 		.hex_digits_export({hex_num_4, hex_num_3, hex_num_1, hex_num_0}),
-		.leds_export({hundreds, signs, LEDR}),
+		.leds_export({hundreds, signs, blankk}),
 		.keycode_export(keycode)
 		
 	 );
 
-
-//instantiate a vga_controller, ball, and color_mapper here with the ports.
-	vga_controller vga (
-		.Clk(MAX10_CLK1_50),
-		.Reset(Reset_h),
-		.hs(VGA_HS),
-		.vs(VGA_VS),
-		.pixel_clk(VGA_Clk),
-		.blank(blank),
-		.sync(sync),
-		.DrawX(drawxsig),
-		.DrawY(drawysig)
-	);
-	
-	ball ball_0 (
-		.Reset(Reset_h),
-		.frame_clk(VGA_Clk),
-		.keycode(keycode),
-		.BallX(ballxsig),
-		.BallY(ballysig),
-		.BallS(ballsizesig)
-	);
-	
-	color_mapper cmapper (
-		.BallX(ballxsig),
-		.BallY(ballysig),
-		.DrawX(drawxsig),
-		.DrawY(drawysig),
-		.Ball_size(ballsizesig),
-		.Red,
-		.Green,
-		.Blue
-	);
 
 
 endmodule
