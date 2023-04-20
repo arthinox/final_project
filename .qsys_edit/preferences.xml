@@ -7,7 +7,11 @@
    <irq preferredWidth="34" />
   </columns>
  </systemtable>
+<<<<<<< HEAD
  <library
    expandedCategories="Library,Library/Interface Protocols/Serial,Project,Library/Processors and Peripherals/Peripherals,Library/Basic Functions/On Chip Memory,Library/Interface Protocols,Library/Processors and Peripherals,Library/Basic Functions" />
+=======
+ <library expandedCategories="Project,Library" />
+>>>>>>> parent of 8c2f6c9 (this fking works)
  <window width="1942" height="1102" x="-11" y="-11" />
 </preferences>

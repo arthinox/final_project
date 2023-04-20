@@ -30,88 +30,74 @@ BYTE SPI_wr(BYTE data) {
 void MAXreg_wr(BYTE reg, BYTE val) {
 	//psuedocode:
 	//select MAX3421E (may not be necessary if you are using SPI peripheral)
+	BYTE wr_data[2] = {reg + 2, val};
+	int ret = alt_avalon_spi_command(0xc0, 0, 2, wr_data, 0, 0, 0);
 	//write reg + 2 via SPI
 	//write val via SPI
+	if (ret < 0) {
+		printf("Error");
+	}
 	//read return code from SPI peripheral (see Intel documentation) 
 	//if return code < 0 print an error
 	//deselect MAX3421E (may not be necessary if you are using SPI peripheral)
-
-	BYTE tx[2] = {reg+2, val};
-
-	int return_code = alt_avalon_spi_command(SPI_0_BASE, 0, 2, tx, 0, NULL, 0);
-
-	if(return_code < 0)
-		alt_printf("ERROR SPI TX RET = %x \n" , return_code);
 }
 //multiple-byte write
 //returns a pointer to a memory position after last written
 BYTE* MAXbytes_wr(BYTE reg, BYTE nbytes, BYTE* data) {
 	//psuedocode:
 	//select MAX3421E (may not be necessary if you are using SPI peripheral)
+	int ret = alt_avalon_spi_command(0xc0, 0, nbytes, data, 0, 0, 0);
+
 	//write reg + 2 via SPI
 	//write data[n] via SPI, where n goes from 0 to nbytes-1
+	if (ret < 0) {
+		printf("Error");
+	}
 	//read return code from SPI peripheral (see Intel documentation) 
 	//if return code < 0  print an error
 	//deselect MAX3421E (may not be necessary if you are using SPI peripheral)
+	return (data + nbytes);
 	//return (data + nbytes);
-
-	BYTE tx[nbytes+1];
-
-	tx[0] = reg + 2;
-	for(int i=0; i<nbytes; i++){
-		tx[i+1] = data[i];
-	}
-
-	int return_code = alt_avalon_spi_command(SPI_0_BASE, 0, (nbytes+1), tx, 0, NULL, 0);
-
-	if(return_code < 0)
-		alt_printf("ERROR SPI TX RET = %x \n" , return_code);
-
-	return data+nbytes;
 }
 
 //reads register from MAX3421E via SPI
 BYTE MAXreg_rd(BYTE reg) {
 	//psuedocode:
 	//select MAX3421E (may not be necessary if you are using SPI peripheral)
+	BYTE * wr_reg;
+	*wr_reg = reg;
+	BYTE val;
+	BYTE * rd_val;
+	*rd_val = val;
+	int ret = alt_avalon_spi_command(0xc0, 0, 1, wr_reg, 1, rd_val, 0);
 	//write reg via SPI
 	//read val via SPI
 	//read return code from SPI peripheral (see Intel documentation)
+	if (ret < 0) {
+		printf("Error");
+	}
 	//if return code < 0 print an error
 	//deselect MAX3421E (may not be necessary if you are using SPI peripheral)
-	//return val
-
-	BYTE val;
-
-	int return_code = alt_avalon_spi_command(SPI_0_BASE, 0, 1, &reg, 1, &val, 0);
-
-	if(return_code < 0)
-		 alt_printf("ERROR SPI TX RET = %x \n" , return_code);
-
 	return val;
+	//return val
 }
 //multiple-byte write
 //returns a pointer to a memory position after last written
 BYTE* MAXbytes_rd(BYTE reg, BYTE nbytes, BYTE* data) {
 	//psuedocode:
 	//select MAX3421E (may not be necessary if you are using SPI peripheral)
+	BYTE * wr_reg;
+	*wr_reg = reg;
+	int ret = alt_avalon_spi_command(0xc0, 0, 1, wr_reg, nbytes, data, 0);
 	//write reg via SPI
 	//read data[n] from SPI, where n goes from 0 to nbytes-1
 	//read return code from SPI peripheral (see Intel documentation)
+	if (ret < 0) {
+		printf("Error");
+	}
 	//if return code < 0 print an error
 	//deselect MAX3421E (may not be necessary if you are using SPI peripheral)
-	//return (data + nbytes);
-
-	int return_code;
-
-	for(int i=0; i<nbytes; i++){
-		return_code = alt_avalon_spi_command(SPI_0_BASE, 0, 1, &reg, 1, &data[i], 0);
-	}
-
-	if(return_code < 0)
-		 alt_printf("ERROR SPI TX RET = %x \n" , return_code);
-
-	return data+nbytes;
+	return (data + nbytes);
 }
 /* reset MAX3421E using chip reset bit. SPI configuration is not affected   */
 void MAX3421E_reset(void) {

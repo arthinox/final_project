@@ -100,7 +100,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "HEX2[3]",
+					"name" : "HEX2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX2[6]",
 					"strict" : false
 				},
 				{
@@ -160,7 +168,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "HEX5[3]",
+					"name" : "HEX5[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX5[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX5[6]",
 					"strict" : false
 				},
 				{
@@ -245,6 +261,50 @@
 				},
 				{
 					"name" : "DRAM_RAS_N",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_HS",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_VS",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_R[0]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_R[1]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_R[2]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_R[3]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_G[0]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_G[2]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_B[0]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_B[1]",
+					"strict" : false
+				},
+				{
+					"name" : "VGA_B[2]",
 					"strict" : false
 				},
 				{
