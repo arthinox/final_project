@@ -1,5 +1,5 @@
 Flow report for lucky
-Fri Apr 14 23:19:50 2023
+Thu Apr 20 15:54:55 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,20 +40,20 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri Apr 14 23:19:50 2023       ;
+; Flow Status                        ; Successful - Thu Apr 20 15:54:55 2023       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; lucky                                       ;
 ; Top-level Entity Name              ; lab62                                       ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 4,039 / 49,760 ( 8 % )                      ;
-;     Total combinational functions  ; 3,456 / 49,760 ( 7 % )                      ;
-;     Dedicated logic registers      ; 2,415 / 49,760 ( 5 % )                      ;
-; Total registers                    ; 2484                                        ;
+; Total logic elements               ; 4,672 / 49,760 ( 9 % )                      ;
+;     Total combinational functions  ; 4,019 / 49,760 ( 8 % )                      ;
+;     Dedicated logic registers      ; 2,716 / 49,760 ( 5 % )                      ;
+; Total registers                    ; 2785                                        ;
 ; Total pins                         ; 141 / 360 ( 39 % )                          ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 11,392 / 1,677,312 ( < 1 % )                ;
+; Total memory bits                  ; 11,464 / 1,677,312 ( < 1 % )                ;
 ; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                             ;
 ; Total PLLs                         ; 1 / 4 ( 25 % )                              ;
 ; UFM blocks                         ; 0 / 1 ( 0 % )                               ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/14/2023 23:16:36 ;
+; Start date & time ; 04/20/2023 15:53:22 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; lucky               ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+-------------------------------------------------------------+---------------+-------------------+----------------+
 ; Assignment Name                     ; Value                                                       ; Default Value ; Entity Name       ; Section Id     ;
 +-------------------------------------+-------------------------------------------------------------+---------------+-------------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 238561869430156.168153219506776                             ; --            ; --                ; --             ;
+; COMPILER_SIGNATURE_ID               ; 238561869430156.168202400221408                             ; --            ; --                ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl                                           ; --            ; --                ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (SystemVerilog)                             ; <None>        ; --                ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                                        ; --            ; --                ; eda_simulation ;
@@ -100,7 +100,7 @@ refer to the applicable agreement for further details.
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                ; --            ; --                ; --             ;
 ; SLD_FILE                            ; lab62_soc/synthesis/lab62_soc.regmap                        ; --            ; --                ; --             ;
 ; SLD_FILE                            ; lab62_soc/synthesis/lab62_soc.debuginfo                     ; --            ; --                ; --             ;
-; SLD_INFO                            ; QSYS_NAME lab62_soc HAS_SOPCINFO 1 GENERATION_ID 1681431938 ; --            ; lab62_soc         ; --             ;
+; SLD_INFO                            ; QSYS_NAME lab62_soc HAS_SOPCINFO 1 GENERATION_ID 1682023935 ; --            ; lab62_soc         ; --             ;
 ; SOPCINFO_FILE                       ; lab62_soc/synthesis/../../lab62_soc.sopcinfo                ; --            ; --                ; --             ;
 ; SYNTHESIS_ONLY_QIP                  ; On                                                          ; --            ; --                ; --             ;
 ; TOP_LEVEL_ENTITY                    ; lab62                                                       ; lucky         ; --                ; --             ;
@@ -112,12 +112,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:01:27     ; 1.0                     ; 4979 MB             ; 00:00:44                           ;
-; Fitter               ; 00:01:09     ; 1.2                     ; 5789 MB             ; 00:00:41                           ;
-; Assembler            ; 00:00:05     ; 1.0                     ; 4706 MB             ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:12     ; 1.7                     ; 4885 MB             ; 00:00:06                           ;
-; EDA Netlist Writer   ; 00:00:04     ; 1.0                     ; 4726 MB             ; 00:00:01                           ;
-; Total                ; 00:02:57     ; --                      ; --                  ; 00:01:34                           ;
+; Analysis & Synthesis ; 00:00:37     ; 1.0                     ; 4996 MB             ; 00:00:28                           ;
+; Fitter               ; 00:00:33     ; 1.4                     ; 5749 MB             ; 00:00:26                           ;
+; Assembler            ; 00:00:04     ; 1.0                     ; 4705 MB             ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:07     ; 2.0                     ; 4896 MB             ; 00:00:07                           ;
+; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 4735 MB             ; 00:00:02                           ;
+; Total                ; 00:01:24     ; --                      ; --                  ; 00:01:05                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

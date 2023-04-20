@@ -67,6 +67,8 @@ logic [9:0] blankk;
 //  REG/WIRE declarations
 //=======================================================
 	logic SPI0_CS_N, SPI0_SCLK, SPI0_MISO, SPI0_MOSI, USB_GPX, USB_IRQ, USB_RST;
+	logic I2C_SCLIN, I2C_SCLOE, I2C_SDAIN, I2C_SDAOE;
+	logic I2S_LRCLK, I2S_SCLK, I2S_DIN, I2S_DOUT, I2S_MCLK;
 	logic [3:0] hex_num_4, hex_num_3, hex_num_1, hex_num_0; //4 bit input hex digits
 	logic [1:0] signs;
 	logic [1:0] hundreds;
@@ -136,20 +138,6 @@ logic [9:0] blankk;
 				LEDR = 10'b0000000000;
 		end
 	
-	
-	////////////////////////////////////////////////////////////////////////////////////
-	////////////////////////////////////////////////////////////////////////////////////
-	
-	//HEX drivers to convert numbers to HEX output
-//	HexDriver hex_driver4 (hex_num_4, HEX4[6:0]);
-//	
-//	
-//	HexDriver hex_driver3 (hex_num_3, HEX3[6:0]);
-	
-	
-	
-//	HexDriver hex_driver1 (hex_num_2, HEX4[6:0]);
-//	HexDriver hex_driver0 (hex_num_1, HEX3[6:0]);
 	assign HEX0[7] = 1'b1;
 	assign HEX1[7] = 1'b1;
 	assign HEX2[7] = 1'b1;
@@ -157,23 +145,38 @@ logic [9:0] blankk;
 	assign HEX3[7] = 1'b1;
 	assign HEX5[7] = 1'b1;
 	
+	////////////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////////////
+	
 
-	
-	
-	//fill in the hundreds digit as well as the negative sign
-//	assign HEX5 = {1'b1, ~signs[1], 3'b111, ~hundreds[1], ~hundreds[1], 1'b1};
-//	assign HEX2 = {1'b1, ~signs[0], 3'b111, ~hundreds[0], ~hundreds[0], 1'b1};
-	////////////////////////////////////////////////////////////////////////////////////
-	////////////////////////////////////////////////////////////////////////////////////
-	
-	
+
 	//Assign one button to reset
 	assign {Reset_h}=~ (KEY[0]);
+	
+	
+	//Connect I2C signals
+	assign I2C_SCLIN = ARDUINO_IO[15];
+	assign I2C_SDAIN = ARDUINO_IO[14];
 
-	//Our A/D converter is only 12 bit
-	assign VGA_R = Red[7:4];
-	assign VGA_B = Blue[7:4];
-	assign VGA_G = Green[7:4];
+	assign ARDUINO_IO[15] = I2C_SCLOE ? 1'b0 : 1'bZ;
+	assign ARDUINO_IO[14] = I2C_SDAOE ? 1'b0 : 1'bZ;
+
+	assign  I2S_SCLK = ARDUINO_IO[5] ;
+	assign  I2S_LRCLK = ARDUINO_IO[4];
+//	assign ARDUINO_IO[2] = I2S_DIN;
+//	assign ARDUINO_IO[1] = I2S_DOUT;
+	
+	// Feed Data In to Data Out (comment out unless testing codec)
+	assign ARDUINO_IO[1] = 1'bZ;
+	assign ARDUINO_IO[2] = ARDUINO_IO[1];
+	
+	logic [1:0] aud_mclk_ctr;								// Straight from lecture slides
+	assign ARDUINO_IO[3] = aud_mclk_ctr[1];
+
+	// generate 12.5MHz CODEC mclk
+	always_ff @ (posedge MAX10_CLK1_50) begin
+		aud_mclk_ctr <= aud_mclk_ctr + 1;
+	end
 	
 	
 	lab62_soc u0 (
@@ -210,7 +213,12 @@ logic [9:0] blankk;
 		//LEDs and HEX
 		.hex_digits_export({hex_num_4, hex_num_3, hex_num_1, hex_num_0}),
 		.leds_export({hundreds, signs, blankk}),
-		.keycode_export(keycode)
+		.keycode_export(keycode),
+		
+		.i2c_wire_sda_in(I2C_SDAIN),
+		.i2c_wire_scl_in(I2C_SCLIN),
+		.i2c_wire_sda_oe(I2C_SDAOE),
+		.i2c_wire_scl_oe(I2C_SCLOE), 
 		
 	 );
 

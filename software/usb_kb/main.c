@@ -22,6 +22,7 @@ extern HID_DEVICE hid_device;
 static BYTE addr = 1; 				//hard-wired USB address
 const char* const devclasses[] = { " Uninitialized", " HID Keyboard", " HID Mouse", " Mass storage" };
 
+/*
 BYTE GetDriverandReport() {
 	BYTE i;
 	BYTE rcode;
@@ -129,6 +130,8 @@ void setKeycode(WORD keycode)
 {
 	IOWR_ALTERA_AVALON_PIO_DATA(0x8002000, keycode);
 }
+
+
 int main() {
 	BYTE rcode;
 	BOOT_MOUSE_REPORT buf;		//USB mouse report
@@ -228,3 +231,5 @@ int main() {
 	}
 	return 0;
 }
+*/
+
