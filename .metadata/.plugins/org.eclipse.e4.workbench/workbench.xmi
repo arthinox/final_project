@@ -45,8 +45,9 @@
           <tags>persp.newWizSC:com.altera.sbtgui.ui.newLibrary</tags>
           <tags>persp.perspSC:com.altera.sbtgui.ui.debugPerspective</tags>
           <tags>persp.viewSC:com.altera.sbtgui.launch.hardware.ByteStreamConsoleView</tags>
-          <children xsi:type="basic:PartSashContainer" xmi:id="_GGxn9cnYEe2qBNJpVblZQw" selectedElement="_GGxn-8nYEe2qBNJpVblZQw" horizontal="true">
+          <children xsi:type="basic:PartSashContainer" xmi:id="_GGxn9cnYEe2qBNJpVblZQw" selectedElement="_GGxn9snYEe2qBNJpVblZQw" horizontal="true">
             <children xsi:type="basic:PartStack" xmi:id="_GGxn9snYEe2qBNJpVblZQw" elementId="topLeft" containerData="1808" selectedElement="_GGxn98nYEe2qBNJpVblZQw">
+              <tags>active</tags>
               <children xsi:type="advanced:Placeholder" xmi:id="_GGxn98nYEe2qBNJpVblZQw" elementId="org.eclipse.ui.navigator.ProjectExplorer" ref="_GGxpEMnYEe2qBNJpVblZQw"/>
               <children xsi:type="advanced:Placeholder" xmi:id="_GGxn-MnYEe2qBNJpVblZQw" elementId="org.eclipse.cdt.ui.CView" toBeRendered="false" ref="_GGxpZMnYEe2qBNJpVblZQw"/>
               <children xsi:type="advanced:Placeholder" xmi:id="_GGxn-cnYEe2qBNJpVblZQw" elementId="org.eclipse.ui.views.ResourceNavigator" toBeRendered="false" ref="_GGxpZcnYEe2qBNJpVblZQw"/>
@@ -93,14 +94,11 @@
       <children xsi:type="basic:PartStack" xmi:id="_GGxpC8nYEe2qBNJpVblZQw" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_GGxpDMnYEe2qBNJpVblZQw">
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
-        <tags>active</tags>
         <children xsi:type="basic:Part" xmi:id="_GGxpDMnYEe2qBNJpVblZQw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="main.c" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;main.c&quot; partName=&quot;main.c&quot; title=&quot;main.c&quot; tooltip=&quot;usb_kb1/main.c&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/usb_kb1/main.c&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;233&quot; selectionTopPixel=&quot;23&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;main.c&quot; partName=&quot;main.c&quot; title=&quot;main.c&quot; tooltip=&quot;usb_kb1/main.c&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/usb_kb1/main.c&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;0&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.eclipse.cdt.ui.editor.CEditor</tags>
           <tags>removeOnHide</tags>
-          <tags>active</tags>
-          <tags>activeOnClose</tags>
           <menus xsi:type="menu:PopupMenu" xmi:id="_GGxpDcnYEe2qBNJpVblZQw" elementId="#CEditorContext">
             <tags>menuContribution:popup</tags>
             <tags>popup:#CEditorContext</tags>
@@ -136,6 +134,8 @@
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view CommonNavigator.LINKING_ENABLED=&quot;1&quot; currentWorkingSetName=&quot;Aggregate for window 1679613166502&quot; org.eclipse.cdt.ui.cview.groupincludes=&quot;false&quot; org.eclipse.cdt.ui.cview.groupmacros=&quot;false&quot; org.eclipse.cdt.ui.editor.CUChildren=&quot;true&quot; org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets=&quot;0&quot;/>"/>
       <tags>View</tags>
       <tags>categoryTag:General</tags>
+      <tags>active</tags>
+      <tags>activeOnClose</tags>
       <menus xmi:id="_GGxpEcnYEe2qBNJpVblZQw" elementId="org.eclipse.ui.navigator.ProjectExplorer">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
@@ -232,7 +232,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_GGxpncnYEe2qBNJpVblZQw" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_TKIf4NpHEe2cSK6A11p2Pw" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_GG0tQMnYEe2qBNJpVblZQw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_LivwYN8sEe2ZSNl2lqjsCA" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_GG0tQMnYEe2qBNJpVblZQw"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_GGxpq8nYEe2qBNJpVblZQw" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -256,7 +256,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_GGxp6MnYEe2qBNJpVblZQw" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_TKK8INpHEe2cSK6A11p2Pw" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_GG0sssnYEe2qBNJpVblZQw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_LiyMoN8sEe2ZSNl2lqjsCA" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_GG0sssnYEe2qBNJpVblZQw"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_GGxp88nYEe2qBNJpVblZQw" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
