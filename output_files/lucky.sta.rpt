@@ -1,5 +1,5 @@
 Timing Analyzer report for lucky
-Thu Apr 20 15:54:51 2023
+Thu Apr 20 17:59:33 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -94,14 +94,14 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 2.04        ;
+; Average used               ; 2.10        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  35.6%      ;
-;     Processor 3            ;  34.1%      ;
-;     Processor 4            ;  34.0%      ;
+;     Processor 2            ;  38.2%      ;
+;     Processor 3            ;  35.9%      ;
+;     Processor 4            ;  35.7%      ;
 +----------------------------+-------------+
 
 
@@ -110,10 +110,10 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------+--------+--------------------------+
 ; SDC File Path                                                               ; Status ; Read at                  ;
 +-----------------------------------------------------------------------------+--------+--------------------------+
-; lab62_soc/synthesis/submodules/altera_reset_controller.sdc                  ; OK     ; Thu Apr 20 15:54:46 2023 ;
-; lab62_soc/synthesis/submodules/altera_avalon_st_handshake_clock_crosser.sdc ; OK     ; Thu Apr 20 15:54:46 2023 ;
-; lab62_soc/synthesis/submodules/lab62_soc_nios2_gen2_0_cpu.sdc               ; OK     ; Thu Apr 20 15:54:46 2023 ;
-; lab6.sdc                                                                    ; OK     ; Thu Apr 20 15:54:46 2023 ;
+; lab62_soc/synthesis/submodules/altera_reset_controller.sdc                  ; OK     ; Thu Apr 20 17:59:27 2023 ;
+; lab62_soc/synthesis/submodules/altera_avalon_st_handshake_clock_crosser.sdc ; OK     ; Thu Apr 20 17:59:27 2023 ;
+; lab62_soc/synthesis/submodules/lab62_soc_nios2_gen2_0_cpu.sdc               ; OK     ; Thu Apr 20 17:59:27 2023 ;
+; lab6.sdc                                                                    ; OK     ; Thu Apr 20 17:59:27 2023 ;
 +-----------------------------------------------------------------------------+--------+--------------------------+
 
 
@@ -134,9 +134,9 @@ refer to the applicable agreement for further details.
 +------------+-----------------+------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                   ; Note ;
 +------------+-----------------+------------------------------+------+
-; 72.87 MHz  ; 72.87 MHz       ; MAX10_CLK1_50                ;      ;
-; 92.9 MHz   ; 92.9 MHz        ; u0|sdram_pll|sd1|pll7|clk[0] ;      ;
-; 146.41 MHz ; 146.41 MHz      ; altera_reserved_tck          ;      ;
+; 75.1 MHz   ; 75.1 MHz        ; MAX10_CLK1_50                ;      ;
+; 95.23 MHz  ; 95.23 MHz       ; u0|sdram_pll|sd1|pll7|clk[0] ;      ;
+; 126.61 MHz ; 126.61 MHz      ; altera_reserved_tck          ;      ;
 +------------+-----------------+------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -146,9 +146,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; MAX10_CLK1_50                ; 6.276  ; 0.000         ;
-; u0|sdram_pll|sd1|pll7|clk[0] ; 9.236  ; 0.000         ;
-; altera_reserved_tck          ; 46.585 ; 0.000         ;
+; MAX10_CLK1_50                ; 6.685  ; 0.000         ;
+; u0|sdram_pll|sd1|pll7|clk[0] ; 9.499  ; 0.000         ;
+; altera_reserved_tck          ; 46.051 ; 0.000         ;
 +------------------------------+--------+---------------+
 
 
@@ -157,9 +157,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------+-------+---------------+
 ; Clock                        ; Slack ; End Point TNS ;
 +------------------------------+-------+---------------+
-; MAX10_CLK1_50                ; 0.251 ; 0.000         ;
-; altera_reserved_tck          ; 0.340 ; 0.000         ;
-; u0|sdram_pll|sd1|pll7|clk[0] ; 0.341 ; 0.000         ;
+; MAX10_CLK1_50                ; 0.242 ; 0.000         ;
+; altera_reserved_tck          ; 0.341 ; 0.000         ;
+; u0|sdram_pll|sd1|pll7|clk[0] ; 0.343 ; 0.000         ;
 +------------------------------+-------+---------------+
 
 
@@ -168,9 +168,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; u0|sdram_pll|sd1|pll7|clk[0] ; 13.927 ; 0.000         ;
-; MAX10_CLK1_50                ; 15.075 ; 0.000         ;
-; altera_reserved_tck          ; 48.200 ; 0.000         ;
+; u0|sdram_pll|sd1|pll7|clk[0] ; 13.608 ; 0.000         ;
+; MAX10_CLK1_50                ; 14.410 ; 0.000         ;
+; altera_reserved_tck          ; 48.381 ; 0.000         ;
 +------------------------------+--------+---------------+
 
 
@@ -179,9 +179,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------+-------+---------------+
 ; Clock                        ; Slack ; End Point TNS ;
 +------------------------------+-------+---------------+
-; altera_reserved_tck          ; 0.907 ; 0.000         ;
-; MAX10_CLK1_50                ; 2.380 ; 0.000         ;
-; u0|sdram_pll|sd1|pll7|clk[0] ; 3.903 ; 0.000         ;
+; altera_reserved_tck          ; 0.906 ; 0.000         ;
+; MAX10_CLK1_50                ; 2.422 ; 0.000         ;
+; u0|sdram_pll|sd1|pll7|clk[0] ; 4.214 ; 0.000         ;
 +------------------------------+-------+---------------+
 
 
@@ -191,8 +191,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
 ; MAX10_CLK1_50                ; 9.550  ; 0.000         ;
-; u0|sdram_pll|sd1|pll7|clk[0] ; 9.708  ; 0.000         ;
-; altera_reserved_tck          ; 49.630 ; 0.000         ;
+; u0|sdram_pll|sd1|pll7|clk[0] ; 9.706  ; 0.000         ;
+; altera_reserved_tck          ; 49.627 ; 0.000         ;
 +------------------------------+--------+---------------+
 
 
@@ -205,7 +205,7 @@ Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
 Number of Synchronizer Chains Found: 21
 Shortest Synchronizer Chain: 2 Registers
 Fraction of Chains for which MTBFs Could Not be Calculated: 0.381
-Worst Case Available Settling Time: 33.126 ns
+Worst Case Available Settling Time: 32.790 ns
 
 Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 1.8
@@ -219,9 +219,9 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +------------+-----------------+------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                   ; Note ;
 +------------+-----------------+------------------------------+------+
-; 79.02 MHz  ; 79.02 MHz       ; MAX10_CLK1_50                ;      ;
-; 100.87 MHz ; 100.87 MHz      ; u0|sdram_pll|sd1|pll7|clk[0] ;      ;
-; 161.39 MHz ; 161.39 MHz      ; altera_reserved_tck          ;      ;
+; 81.56 MHz  ; 81.56 MHz       ; MAX10_CLK1_50                ;      ;
+; 102.84 MHz ; 102.84 MHz      ; u0|sdram_pll|sd1|pll7|clk[0] ;      ;
+; 138.81 MHz ; 138.81 MHz      ; altera_reserved_tck          ;      ;
 +------------+-----------------+------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -231,9 +231,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; MAX10_CLK1_50                ; 7.345  ; 0.000         ;
-; u0|sdram_pll|sd1|pll7|clk[0] ; 10.086 ; 0.000         ;
-; altera_reserved_tck          ; 46.902 ; 0.000         ;
+; MAX10_CLK1_50                ; 7.739  ; 0.000         ;
+; u0|sdram_pll|sd1|pll7|clk[0] ; 10.276 ; 0.000         ;
+; altera_reserved_tck          ; 46.398 ; 0.000         ;
 +------------------------------+--------+---------------+
 
 
@@ -242,9 +242,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------+-------+---------------+
 ; Clock                        ; Slack ; End Point TNS ;
 +------------------------------+-------+---------------+
-; MAX10_CLK1_50                ; 0.252 ; 0.000         ;
-; altera_reserved_tck          ; 0.305 ; 0.000         ;
-; u0|sdram_pll|sd1|pll7|clk[0] ; 0.306 ; 0.000         ;
+; MAX10_CLK1_50                ; 0.240 ; 0.000         ;
+; altera_reserved_tck          ; 0.306 ; 0.000         ;
+; u0|sdram_pll|sd1|pll7|clk[0] ; 0.308 ; 0.000         ;
 +------------------------------+-------+---------------+
 
 
@@ -253,9 +253,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; u0|sdram_pll|sd1|pll7|clk[0] ; 14.486 ; 0.000         ;
-; MAX10_CLK1_50                ; 15.551 ; 0.000         ;
-; altera_reserved_tck          ; 48.360 ; 0.000         ;
+; u0|sdram_pll|sd1|pll7|clk[0] ; 14.177 ; 0.000         ;
+; MAX10_CLK1_50                ; 14.888 ; 0.000         ;
+; altera_reserved_tck          ; 48.535 ; 0.000         ;
 +------------------------------+--------+---------------+
 
 
@@ -264,9 +264,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------+-------+---------------+
 ; Clock                        ; Slack ; End Point TNS ;
 +------------------------------+-------+---------------+
-; altera_reserved_tck          ; 0.831 ; 0.000         ;
-; MAX10_CLK1_50                ; 2.141 ; 0.000         ;
-; u0|sdram_pll|sd1|pll7|clk[0] ; 3.503 ; 0.000         ;
+; altera_reserved_tck          ; 0.830 ; 0.000         ;
+; MAX10_CLK1_50                ; 2.184 ; 0.000         ;
+; u0|sdram_pll|sd1|pll7|clk[0] ; 3.783 ; 0.000         ;
 +------------------------------+-------+---------------+
 
 
@@ -275,9 +275,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; MAX10_CLK1_50                ; 9.581  ; 0.000         ;
+; MAX10_CLK1_50                ; 9.575  ; 0.000         ;
 ; u0|sdram_pll|sd1|pll7|clk[0] ; 9.688  ; 0.000         ;
-; altera_reserved_tck          ; 49.657 ; 0.000         ;
+; altera_reserved_tck          ; 49.648 ; 0.000         ;
 +------------------------------+--------+---------------+
 
 
@@ -290,7 +290,7 @@ Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
 Number of Synchronizer Chains Found: 21
 Shortest Synchronizer Chain: 2 Registers
 Fraction of Chains for which MTBFs Could Not be Calculated: 0.381
-Worst Case Available Settling Time: 33.662 ns
+Worst Case Available Settling Time: 33.329 ns
 
 Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 1.8
@@ -304,9 +304,9 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; MAX10_CLK1_50                ; 13.940 ; 0.000         ;
-; u0|sdram_pll|sd1|pll7|clk[0] ; 15.195 ; 0.000         ;
-; altera_reserved_tck          ; 48.829 ; 0.000         ;
+; MAX10_CLK1_50                ; 14.203 ; 0.000         ;
+; u0|sdram_pll|sd1|pll7|clk[0] ; 15.314 ; 0.000         ;
+; altera_reserved_tck          ; 48.585 ; 0.000         ;
 +------------------------------+--------+---------------+
 
 
@@ -315,9 +315,9 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +------------------------------+-------+---------------+
 ; Clock                        ; Slack ; End Point TNS ;
 +------------------------------+-------+---------------+
-; MAX10_CLK1_50                ; 0.098 ; 0.000         ;
-; altera_reserved_tck          ; 0.147 ; 0.000         ;
-; u0|sdram_pll|sd1|pll7|clk[0] ; 0.149 ; 0.000         ;
+; MAX10_CLK1_50                ; 0.087 ; 0.000         ;
+; altera_reserved_tck          ; 0.149 ; 0.000         ;
+; u0|sdram_pll|sd1|pll7|clk[0] ; 0.150 ; 0.000         ;
 +------------------------------+-------+---------------+
 
 
@@ -326,9 +326,9 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; u0|sdram_pll|sd1|pll7|clk[0] ; 17.143 ; 0.000         ;
-; MAX10_CLK1_50                ; 17.529 ; 0.000         ;
-; altera_reserved_tck          ; 49.442 ; 0.000         ;
+; u0|sdram_pll|sd1|pll7|clk[0] ; 16.926 ; 0.000         ;
+; MAX10_CLK1_50                ; 17.198 ; 0.000         ;
+; altera_reserved_tck          ; 49.525 ; 0.000         ;
 +------------------------------+--------+---------------+
 
 
@@ -337,9 +337,9 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +------------------------------+-------+---------------+
 ; Clock                        ; Slack ; End Point TNS ;
 +------------------------------+-------+---------------+
-; altera_reserved_tck          ; 0.406 ; 0.000         ;
-; MAX10_CLK1_50                ; 1.185 ; 0.000         ;
-; u0|sdram_pll|sd1|pll7|clk[0] ; 1.823 ; 0.000         ;
+; altera_reserved_tck          ; 0.405 ; 0.000         ;
+; MAX10_CLK1_50                ; 1.217 ; 0.000         ;
+; u0|sdram_pll|sd1|pll7|clk[0] ; 2.027 ; 0.000         ;
 +------------------------------+-------+---------------+
 
 
@@ -348,9 +348,9 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +------------------------------+--------+---------------+
 ; Clock                        ; Slack  ; End Point TNS ;
 +------------------------------+--------+---------------+
-; MAX10_CLK1_50                ; 9.401  ; 0.000         ;
+; MAX10_CLK1_50                ; 9.402  ; 0.000         ;
 ; u0|sdram_pll|sd1|pll7|clk[0] ; 9.720  ; 0.000         ;
-; altera_reserved_tck          ; 49.410 ; 0.000         ;
+; altera_reserved_tck          ; 49.421 ; 0.000         ;
 +------------------------------+--------+---------------+
 
 
@@ -363,7 +363,7 @@ Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
 Number of Synchronizer Chains Found: 21
 Shortest Synchronizer Chain: 2 Registers
 Fraction of Chains for which MTBFs Could Not be Calculated: 0.381
-Worst Case Available Settling Time: 37.049 ns
+Worst Case Available Settling Time: 36.841 ns
 
 Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 1.8
@@ -377,10 +377,10 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +-------------------------------+--------+-------+----------+---------+---------------------+
 ; Clock                         ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +-------------------------------+--------+-------+----------+---------+---------------------+
-; Worst-case Slack              ; 6.276  ; 0.098 ; 13.927   ; 0.406   ; 9.401               ;
-;  MAX10_CLK1_50                ; 6.276  ; 0.098 ; 15.075   ; 1.185   ; 9.401               ;
-;  altera_reserved_tck          ; 46.585 ; 0.147 ; 48.200   ; 0.406   ; 49.410              ;
-;  u0|sdram_pll|sd1|pll7|clk[0] ; 9.236  ; 0.149 ; 13.927   ; 1.823   ; 9.688               ;
+; Worst-case Slack              ; 6.685  ; 0.087 ; 13.608   ; 0.405   ; 9.402               ;
+;  MAX10_CLK1_50                ; 6.685  ; 0.087 ; 14.410   ; 1.217   ; 9.402               ;
+;  altera_reserved_tck          ; 46.051 ; 0.149 ; 48.381   ; 0.405   ; 49.421              ;
+;  u0|sdram_pll|sd1|pll7|clk[0] ; 9.499  ; 0.150 ; 13.608   ; 2.027   ; 9.688               ;
 ; Design-wide TNS               ; 0.0    ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
 ;  MAX10_CLK1_50                ; 0.000  ; 0.000 ; 0.000    ; 0.000   ; 0.000               ;
 ;  altera_reserved_tck          ; 0.000  ; 0.000 ; 0.000    ; 0.000   ; 0.000               ;
@@ -489,8 +489,6 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 ; VGA_B[2]            ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; VGA_B[3]            ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ARDUINO_IO[0]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; ARDUINO_IO[4]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; ARDUINO_IO[5]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; DRAM_DQ[0]          ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; DRAM_DQ[1]          ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; DRAM_DQ[2]          ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
@@ -510,6 +508,8 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 ; ARDUINO_IO[1]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ARDUINO_IO[2]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ARDUINO_IO[3]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ARDUINO_IO[4]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ARDUINO_IO[5]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ARDUINO_IO[6]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ARDUINO_IO[7]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ARDUINO_IO[8]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
@@ -541,8 +541,6 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 ; SW[8]               ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; SW[9]               ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; ARDUINO_IO[0]       ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; ARDUINO_IO[4]       ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
-; ARDUINO_IO[5]       ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; DRAM_DQ[0]          ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; DRAM_DQ[1]          ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; DRAM_DQ[2]          ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
@@ -562,6 +560,8 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 ; ARDUINO_IO[1]       ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; ARDUINO_IO[2]       ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; ARDUINO_IO[3]       ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
+; ARDUINO_IO[4]       ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
+; ARDUINO_IO[5]       ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; ARDUINO_IO[6]       ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; ARDUINO_IO[7]       ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
 ; ARDUINO_IO[8]       ; 2.5 V                 ; 2000 ps         ; 2000 ps         ;
@@ -687,8 +687,6 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 ; VGA_B[2]            ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; VGA_B[3]            ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; ARDUINO_IO[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
-; ARDUINO_IO[4]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
-; ARDUINO_IO[5]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.26e-09 V                   ; 2.4 V               ; -0.0783 V           ; 0.157 V                              ; 0.167 V                              ; 4.55e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.26e-09 V                  ; 2.4 V              ; -0.0783 V          ; 0.157 V                             ; 0.167 V                             ; 4.55e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
 ; DRAM_DQ[0]          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; DRAM_DQ[1]          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; DRAM_DQ[2]          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
@@ -708,6 +706,8 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 ; ARDUINO_IO[1]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; ARDUINO_IO[2]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; ARDUINO_IO[3]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
+; ARDUINO_IO[4]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
+; ARDUINO_IO[5]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.26e-09 V                   ; 2.4 V               ; -0.0783 V           ; 0.157 V                              ; 0.167 V                              ; 4.55e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.26e-09 V                  ; 2.4 V              ; -0.0783 V          ; 0.157 V                             ; 0.167 V                             ; 4.55e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
 ; ARDUINO_IO[6]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.26e-09 V                   ; 2.4 V               ; -0.0783 V           ; 0.157 V                              ; 0.167 V                              ; 4.55e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.26e-09 V                  ; 2.4 V              ; -0.0783 V          ; 0.157 V                             ; 0.167 V                             ; 4.55e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
 ; ARDUINO_IO[7]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.26e-09 V                   ; 2.4 V               ; -0.0773 V           ; 0.156 V                              ; 0.166 V                              ; 4.55e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.26e-09 V                  ; 2.4 V              ; -0.0773 V          ; 0.156 V                             ; 0.166 V                             ; 4.55e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
 ; ARDUINO_IO[8]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
@@ -824,8 +824,6 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 ; VGA_B[2]            ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
 ; VGA_B[3]            ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
 ; ARDUINO_IO[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
-; ARDUINO_IO[4]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
-; ARDUINO_IO[5]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0459 V           ; 0.201 V                              ; 0.093 V                              ; 4.9e-10 s                   ; 5.83e-10 s                  ; Yes                        ; No                         ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0459 V          ; 0.201 V                             ; 0.093 V                             ; 4.9e-10 s                  ; 5.83e-10 s                 ; Yes                       ; No                        ;
 ; DRAM_DQ[0]          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
 ; DRAM_DQ[1]          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
 ; DRAM_DQ[2]          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
@@ -845,6 +843,8 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 ; ARDUINO_IO[1]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
 ; ARDUINO_IO[2]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
 ; ARDUINO_IO[3]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
+; ARDUINO_IO[4]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
+; ARDUINO_IO[5]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0459 V           ; 0.201 V                              ; 0.093 V                              ; 4.9e-10 s                   ; 5.83e-10 s                  ; Yes                        ; No                         ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0459 V          ; 0.201 V                             ; 0.093 V                             ; 4.9e-10 s                  ; 5.83e-10 s                 ; Yes                       ; No                        ;
 ; ARDUINO_IO[6]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0459 V           ; 0.201 V                              ; 0.093 V                              ; 4.9e-10 s                   ; 5.83e-10 s                  ; Yes                        ; No                         ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0459 V          ; 0.201 V                             ; 0.093 V                             ; 4.9e-10 s                  ; 5.83e-10 s                 ; Yes                       ; No                        ;
 ; ARDUINO_IO[7]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0449 V           ; 0.201 V                              ; 0.093 V                              ; 4.89e-10 s                  ; 5.81e-10 s                  ; Yes                        ; No                         ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0449 V          ; 0.201 V                             ; 0.093 V                             ; 4.89e-10 s                 ; 5.81e-10 s                 ; Yes                       ; No                        ;
 ; ARDUINO_IO[8]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
@@ -961,8 +961,6 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 ; VGA_B[2]            ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; VGA_B[3]            ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; ARDUINO_IO[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
-; ARDUINO_IO[4]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
-; ARDUINO_IO[5]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.77 V              ; -0.0485 V           ; 0.289 V                              ; 0.058 V                              ; 2.81e-10 s                  ; 3.04e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.77 V             ; -0.0485 V          ; 0.289 V                             ; 0.058 V                             ; 2.81e-10 s                 ; 3.04e-10 s                 ; No                        ; Yes                       ;
 ; DRAM_DQ[0]          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; DRAM_DQ[1]          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; DRAM_DQ[2]          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
@@ -982,6 +980,8 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 ; ARDUINO_IO[1]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; ARDUINO_IO[2]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; ARDUINO_IO[3]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; ARDUINO_IO[4]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; ARDUINO_IO[5]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.77 V              ; -0.0485 V           ; 0.289 V                              ; 0.058 V                              ; 2.81e-10 s                  ; 3.04e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.77 V             ; -0.0485 V          ; 0.289 V                             ; 0.058 V                             ; 2.81e-10 s                 ; 3.04e-10 s                 ; No                        ; Yes                       ;
 ; ARDUINO_IO[6]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.77 V              ; -0.0485 V           ; 0.289 V                              ; 0.058 V                              ; 2.81e-10 s                  ; 3.04e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.77 V             ; -0.0485 V          ; 0.289 V                             ; 0.058 V                             ; 2.81e-10 s                 ; 3.04e-10 s                 ; No                        ; Yes                       ;
 ; ARDUINO_IO[7]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.77 V              ; -0.0486 V           ; 0.285 V                              ; 0.06 V                               ; 2.8e-10 s                   ; 3.04e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.77 V             ; -0.0486 V          ; 0.285 V                             ; 0.06 V                              ; 2.8e-10 s                  ; 3.04e-10 s                 ; No                        ; Yes                       ;
 ; ARDUINO_IO[8]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
@@ -1002,13 +1002,13 @@ Typical MTBF values are calculated based on the nominal silicon characteristics,
 +------------------------------+------------------------------+------------+------------+----------+----------+
 ; From Clock                   ; To Clock                     ; RR Paths   ; FR Paths   ; RF Paths ; FF Paths ;
 +------------------------------+------------------------------+------------+------------+----------+----------+
-; altera_reserved_tck          ; altera_reserved_tck          ; 1534       ; 0          ; 40       ; 3        ;
+; altera_reserved_tck          ; altera_reserved_tck          ; 1530       ; 0          ; 40       ; 3        ;
 ; MAX10_CLK1_50                ; altera_reserved_tck          ; false path ; 0          ; 0        ; 0        ;
 ; altera_reserved_tck          ; MAX10_CLK1_50                ; false path ; false path ; 0        ; 0        ;
-; MAX10_CLK1_50                ; MAX10_CLK1_50                ; 126445     ; 0          ; 0        ; 0        ;
+; MAX10_CLK1_50                ; MAX10_CLK1_50                ; 123976     ; 0          ; 0        ; 0        ;
 ; u0|sdram_pll|sd1|pll7|clk[0] ; MAX10_CLK1_50                ; 68         ; 0          ; 0        ; 0        ;
 ; MAX10_CLK1_50                ; u0|sdram_pll|sd1|pll7|clk[0] ; 105        ; 0          ; 0        ; 0        ;
-; u0|sdram_pll|sd1|pll7|clk[0] ; u0|sdram_pll|sd1|pll7|clk[0] ; 24786      ; 0          ; 0        ; 0        ;
+; u0|sdram_pll|sd1|pll7|clk[0] ; u0|sdram_pll|sd1|pll7|clk[0] ; 26424      ; 0          ; 0        ; 0        ;
 +------------------------------+------------------------------+------------+------------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1018,13 +1018,13 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------------------------+------------------------------+------------+------------+----------+----------+
 ; From Clock                   ; To Clock                     ; RR Paths   ; FR Paths   ; RF Paths ; FF Paths ;
 +------------------------------+------------------------------+------------+------------+----------+----------+
-; altera_reserved_tck          ; altera_reserved_tck          ; 1534       ; 0          ; 40       ; 3        ;
+; altera_reserved_tck          ; altera_reserved_tck          ; 1530       ; 0          ; 40       ; 3        ;
 ; MAX10_CLK1_50                ; altera_reserved_tck          ; false path ; 0          ; 0        ; 0        ;
 ; altera_reserved_tck          ; MAX10_CLK1_50                ; false path ; false path ; 0        ; 0        ;
-; MAX10_CLK1_50                ; MAX10_CLK1_50                ; 126445     ; 0          ; 0        ; 0        ;
+; MAX10_CLK1_50                ; MAX10_CLK1_50                ; 123976     ; 0          ; 0        ; 0        ;
 ; u0|sdram_pll|sd1|pll7|clk[0] ; MAX10_CLK1_50                ; 68         ; 0          ; 0        ; 0        ;
 ; MAX10_CLK1_50                ; u0|sdram_pll|sd1|pll7|clk[0] ; 105        ; 0          ; 0        ; 0        ;
-; u0|sdram_pll|sd1|pll7|clk[0] ; u0|sdram_pll|sd1|pll7|clk[0] ; 24786      ; 0          ; 0        ; 0        ;
+; u0|sdram_pll|sd1|pll7|clk[0] ; u0|sdram_pll|sd1|pll7|clk[0] ; 26424      ; 0          ; 0        ; 0        ;
 +------------------------------+------------------------------+------------+------------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -1073,24 +1073,26 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Property                        ; Setup ; Hold ;
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
-; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 5     ; 5    ;
-; Unconstrained Input Port Paths  ; 5     ; 5    ;
+; Unconstrained Clocks            ; 2     ; 2    ;
+; Unconstrained Input Ports       ; 4     ; 4    ;
+; Unconstrained Input Port Paths  ; 4     ; 4    ;
 ; Unconstrained Output Ports      ; 39    ; 39   ;
 ; Unconstrained Output Port Paths ; 252   ; 252  ;
 +---------------------------------+-------+------+
 
 
-+---------------------------------------------------------------------------------------+
-; Clock Status Summary                                                                  ;
-+------------------------------+------------------------------+-----------+-------------+
-; Target                       ; Clock                        ; Type      ; Status      ;
-+------------------------------+------------------------------+-----------+-------------+
-; MAX10_CLK1_50                ; MAX10_CLK1_50                ; Base      ; Constrained ;
-; altera_reserved_tck          ; altera_reserved_tck          ; Base      ; Constrained ;
-; u0|sdram_pll|sd1|pll7|clk[0] ; u0|sdram_pll|sd1|pll7|clk[0] ; Generated ; Constrained ;
-; u0|sdram_pll|sd1|pll7|clk[1] ; u0|sdram_pll|sd1|pll7|clk[1] ; Generated ; Constrained ;
-+------------------------------+------------------------------+-----------+-------------+
++-----------------------------------------------------------------------------------------+
+; Clock Status Summary                                                                    ;
++------------------------------+------------------------------+-----------+---------------+
+; Target                       ; Clock                        ; Type      ; Status        ;
++------------------------------+------------------------------+-----------+---------------+
+; ARDUINO_IO[4]                ;                              ; Base      ; Unconstrained ;
+; ARDUINO_IO[5]                ;                              ; Base      ; Unconstrained ;
+; MAX10_CLK1_50                ; MAX10_CLK1_50                ; Base      ; Constrained   ;
+; altera_reserved_tck          ; altera_reserved_tck          ; Base      ; Constrained   ;
+; u0|sdram_pll|sd1|pll7|clk[0] ; u0|sdram_pll|sd1|pll7|clk[0] ; Generated ; Constrained   ;
+; u0|sdram_pll|sd1|pll7|clk[1] ; u0|sdram_pll|sd1|pll7|clk[1] ; Generated ; Constrained   ;
++------------------------------+------------------------------+-----------+---------------+
 
 
 +-------------------------------------------------------------------------------------------------------+
@@ -1098,7 +1100,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +----------------+--------------------------------------------------------------------------------------+
 ; Input Port     ; Comment                                                                              ;
 +----------------+--------------------------------------------------------------------------------------+
-; ARDUINO_IO[1]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ARDUINO_IO[9]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ARDUINO_IO[12] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ARDUINO_IO[14] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -1158,7 +1159,6 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +----------------+--------------------------------------------------------------------------------------+
 ; Input Port     ; Comment                                                                              ;
 +----------------+--------------------------------------------------------------------------------------+
-; ARDUINO_IO[1]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ARDUINO_IO[9]  ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ARDUINO_IO[12] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ARDUINO_IO[14] ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -1219,7 +1219,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Apr 20 15:54:44 2023
+    Info: Processing started: Thu Apr 20 17:59:25 2023
 Info: Command: quartus_sta lucky -c lucky
 Info: qsta_default_script.tcl version: #1
 Warning (20013): Ignored 24 assignments for entity "DE10_LITE_Default" -- entity does not exist in design
@@ -1321,42 +1321,46 @@ Warning (332049): Ignored set_output_delay at lab6.sdc(66): Argument -clock is n
     Info (332050): set_output_delay -max -clock clk_dram_ext 1.6  [get_ports {DRAM_ADDR* DRAM_BA* DRAM_RAS_N DRAM_CAS_N DRAM_WE_N DRAM_CKE DRAM_CS_N}] File: C:/Users/victor/Documents/GitHub/ECE385/final_project/lab6.sdc Line: 66
 Warning (332049): Ignored set_output_delay at lab6.sdc(67): Argument -clock is not an object ID File: C:/Users/victor/Documents/GitHub/ECE385/final_project/lab6.sdc Line: 67
     Info (332050): set_output_delay -min -clock clk_dram_ext -0.9 [get_ports {DRAM_ADDR* DRAM_BA* DRAM_RAS_N DRAM_CAS_N DRAM_WE_N DRAM_CKE DRAM_CS_N}] File: C:/Users/victor/Documents/GitHub/ECE385/final_project/lab6.sdc Line: 67
+Warning (332060): Node: ARDUINO_IO[5] was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register i2s_interface:i2s0|count[4] is being clocked by ARDUINO_IO[5]
+Warning (332060): Node: ARDUINO_IO[4] was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register i2s_interface:i2s0|sqrwv[5] is being clocked by ARDUINO_IO[4]
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
     Info (332098): Cell: altera_internal_jtag  from: tck  to: tckutap
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
-Info (332146): Worst-case setup slack is 6.276
+Info (332146): Worst-case setup slack is 6.685
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     6.276               0.000 MAX10_CLK1_50 
-    Info (332119):     9.236               0.000 u0|sdram_pll|sd1|pll7|clk[0] 
-    Info (332119):    46.585               0.000 altera_reserved_tck 
-Info (332146): Worst-case hold slack is 0.251
+    Info (332119):     6.685               0.000 MAX10_CLK1_50 
+    Info (332119):     9.499               0.000 u0|sdram_pll|sd1|pll7|clk[0] 
+    Info (332119):    46.051               0.000 altera_reserved_tck 
+Info (332146): Worst-case hold slack is 0.242
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.251               0.000 MAX10_CLK1_50 
-    Info (332119):     0.340               0.000 altera_reserved_tck 
-    Info (332119):     0.341               0.000 u0|sdram_pll|sd1|pll7|clk[0] 
-Info (332146): Worst-case recovery slack is 13.927
+    Info (332119):     0.242               0.000 MAX10_CLK1_50 
+    Info (332119):     0.341               0.000 altera_reserved_tck 
+    Info (332119):     0.343               0.000 u0|sdram_pll|sd1|pll7|clk[0] 
+Info (332146): Worst-case recovery slack is 13.608
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    13.927               0.000 u0|sdram_pll|sd1|pll7|clk[0] 
-    Info (332119):    15.075               0.000 MAX10_CLK1_50 
-    Info (332119):    48.200               0.000 altera_reserved_tck 
-Info (332146): Worst-case removal slack is 0.907
+    Info (332119):    13.608               0.000 u0|sdram_pll|sd1|pll7|clk[0] 
+    Info (332119):    14.410               0.000 MAX10_CLK1_50 
+    Info (332119):    48.381               0.000 altera_reserved_tck 
+Info (332146): Worst-case removal slack is 0.906
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.907               0.000 altera_reserved_tck 
-    Info (332119):     2.380               0.000 MAX10_CLK1_50 
-    Info (332119):     3.903               0.000 u0|sdram_pll|sd1|pll7|clk[0] 
+    Info (332119):     0.906               0.000 altera_reserved_tck 
+    Info (332119):     2.422               0.000 MAX10_CLK1_50 
+    Info (332119):     4.214               0.000 u0|sdram_pll|sd1|pll7|clk[0] 
 Info (332146): Worst-case minimum pulse width slack is 9.550
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):     9.550               0.000 MAX10_CLK1_50 
-    Info (332119):     9.708               0.000 u0|sdram_pll|sd1|pll7|clk[0] 
-    Info (332119):    49.630               0.000 altera_reserved_tck 
+    Info (332119):     9.706               0.000 u0|sdram_pll|sd1|pll7|clk[0] 
+    Info (332119):    49.627               0.000 altera_reserved_tck 
 Info (332114): Report Metastability: Found 21 synchronizer chains.
     Info (332114): Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
     Info (332114): Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
@@ -1364,7 +1368,7 @@ Info (332114): Report Metastability: Found 21 synchronizer chains.
     Info (332114): Number of Synchronizer Chains Found: 21
     Info (332114): Shortest Synchronizer Chain: 2 Registers
     Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 0.381
-    Info (332114): Worst Case Available Settling Time: 33.126 ns
+    Info (332114): Worst Case Available Settling Time: 32.790 ns
     Info (332114): 
     Info (332114): Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
     Info (332114):   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 1.8
@@ -1373,39 +1377,43 @@ Info (332114): Report Metastability: Found 21 synchronizer chains.
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
+Warning (332060): Node: ARDUINO_IO[5] was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register i2s_interface:i2s0|count[4] is being clocked by ARDUINO_IO[5]
+Warning (332060): Node: ARDUINO_IO[4] was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register i2s_interface:i2s0|sqrwv[5] is being clocked by ARDUINO_IO[4]
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
     Info (332098): Cell: altera_internal_jtag  from: tck  to: tckutap
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
-Info (332146): Worst-case setup slack is 7.345
+Info (332146): Worst-case setup slack is 7.739
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     7.345               0.000 MAX10_CLK1_50 
-    Info (332119):    10.086               0.000 u0|sdram_pll|sd1|pll7|clk[0] 
-    Info (332119):    46.902               0.000 altera_reserved_tck 
-Info (332146): Worst-case hold slack is 0.252
+    Info (332119):     7.739               0.000 MAX10_CLK1_50 
+    Info (332119):    10.276               0.000 u0|sdram_pll|sd1|pll7|clk[0] 
+    Info (332119):    46.398               0.000 altera_reserved_tck 
+Info (332146): Worst-case hold slack is 0.240
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.252               0.000 MAX10_CLK1_50 
-    Info (332119):     0.305               0.000 altera_reserved_tck 
-    Info (332119):     0.306               0.000 u0|sdram_pll|sd1|pll7|clk[0] 
-Info (332146): Worst-case recovery slack is 14.486
+    Info (332119):     0.240               0.000 MAX10_CLK1_50 
+    Info (332119):     0.306               0.000 altera_reserved_tck 
+    Info (332119):     0.308               0.000 u0|sdram_pll|sd1|pll7|clk[0] 
+Info (332146): Worst-case recovery slack is 14.177
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    14.486               0.000 u0|sdram_pll|sd1|pll7|clk[0] 
-    Info (332119):    15.551               0.000 MAX10_CLK1_50 
-    Info (332119):    48.360               0.000 altera_reserved_tck 
-Info (332146): Worst-case removal slack is 0.831
+    Info (332119):    14.177               0.000 u0|sdram_pll|sd1|pll7|clk[0] 
+    Info (332119):    14.888               0.000 MAX10_CLK1_50 
+    Info (332119):    48.535               0.000 altera_reserved_tck 
+Info (332146): Worst-case removal slack is 0.830
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.831               0.000 altera_reserved_tck 
-    Info (332119):     2.141               0.000 MAX10_CLK1_50 
-    Info (332119):     3.503               0.000 u0|sdram_pll|sd1|pll7|clk[0] 
-Info (332146): Worst-case minimum pulse width slack is 9.581
+    Info (332119):     0.830               0.000 altera_reserved_tck 
+    Info (332119):     2.184               0.000 MAX10_CLK1_50 
+    Info (332119):     3.783               0.000 u0|sdram_pll|sd1|pll7|clk[0] 
+Info (332146): Worst-case minimum pulse width slack is 9.575
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     9.581               0.000 MAX10_CLK1_50 
+    Info (332119):     9.575               0.000 MAX10_CLK1_50 
     Info (332119):     9.688               0.000 u0|sdram_pll|sd1|pll7|clk[0] 
-    Info (332119):    49.657               0.000 altera_reserved_tck 
+    Info (332119):    49.648               0.000 altera_reserved_tck 
 Info (332114): Report Metastability: Found 21 synchronizer chains.
     Info (332114): Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
     Info (332114): Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
@@ -1413,46 +1421,50 @@ Info (332114): Report Metastability: Found 21 synchronizer chains.
     Info (332114): Number of Synchronizer Chains Found: 21
     Info (332114): Shortest Synchronizer Chain: 2 Registers
     Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 0.381
-    Info (332114): Worst Case Available Settling Time: 33.662 ns
+    Info (332114): Worst Case Available Settling Time: 33.329 ns
     Info (332114): 
     Info (332114): Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
     Info (332114):   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 1.8
     Info (332114): Typical MTBF values are calculated based on the nominal silicon characteristics, at nominal operating conditions.
     Info (332114):   - Under typical conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 3.7
 Info: Analyzing Fast 1200mV 0C Model
+Warning (332060): Node: ARDUINO_IO[5] was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register i2s_interface:i2s0|count[4] is being clocked by ARDUINO_IO[5]
+Warning (332060): Node: ARDUINO_IO[4] was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register i2s_interface:i2s0|sqrwv[5] is being clocked by ARDUINO_IO[4]
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
     Info (332098): Cell: altera_internal_jtag  from: tck  to: tckutap
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
-Info (332146): Worst-case setup slack is 13.940
+Info (332146): Worst-case setup slack is 14.203
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    13.940               0.000 MAX10_CLK1_50 
-    Info (332119):    15.195               0.000 u0|sdram_pll|sd1|pll7|clk[0] 
-    Info (332119):    48.829               0.000 altera_reserved_tck 
-Info (332146): Worst-case hold slack is 0.098
+    Info (332119):    14.203               0.000 MAX10_CLK1_50 
+    Info (332119):    15.314               0.000 u0|sdram_pll|sd1|pll7|clk[0] 
+    Info (332119):    48.585               0.000 altera_reserved_tck 
+Info (332146): Worst-case hold slack is 0.087
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.098               0.000 MAX10_CLK1_50 
-    Info (332119):     0.147               0.000 altera_reserved_tck 
-    Info (332119):     0.149               0.000 u0|sdram_pll|sd1|pll7|clk[0] 
-Info (332146): Worst-case recovery slack is 17.143
+    Info (332119):     0.087               0.000 MAX10_CLK1_50 
+    Info (332119):     0.149               0.000 altera_reserved_tck 
+    Info (332119):     0.150               0.000 u0|sdram_pll|sd1|pll7|clk[0] 
+Info (332146): Worst-case recovery slack is 16.926
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    17.143               0.000 u0|sdram_pll|sd1|pll7|clk[0] 
-    Info (332119):    17.529               0.000 MAX10_CLK1_50 
-    Info (332119):    49.442               0.000 altera_reserved_tck 
-Info (332146): Worst-case removal slack is 0.406
+    Info (332119):    16.926               0.000 u0|sdram_pll|sd1|pll7|clk[0] 
+    Info (332119):    17.198               0.000 MAX10_CLK1_50 
+    Info (332119):    49.525               0.000 altera_reserved_tck 
+Info (332146): Worst-case removal slack is 0.405
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.406               0.000 altera_reserved_tck 
-    Info (332119):     1.185               0.000 MAX10_CLK1_50 
-    Info (332119):     1.823               0.000 u0|sdram_pll|sd1|pll7|clk[0] 
-Info (332146): Worst-case minimum pulse width slack is 9.401
+    Info (332119):     0.405               0.000 altera_reserved_tck 
+    Info (332119):     1.217               0.000 MAX10_CLK1_50 
+    Info (332119):     2.027               0.000 u0|sdram_pll|sd1|pll7|clk[0] 
+Info (332146): Worst-case minimum pulse width slack is 9.402
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     9.401               0.000 MAX10_CLK1_50 
+    Info (332119):     9.402               0.000 MAX10_CLK1_50 
     Info (332119):     9.720               0.000 u0|sdram_pll|sd1|pll7|clk[0] 
-    Info (332119):    49.410               0.000 altera_reserved_tck 
+    Info (332119):    49.421               0.000 altera_reserved_tck 
 Info (332114): Report Metastability: Found 21 synchronizer chains.
     Info (332114): Worst-Case MTBF of Design is 1e+09 years or 3.15e+16 seconds.
     Info (332114): Typical MTBF of Design is 1e+09 years or 3.15e+16 seconds.
@@ -1460,7 +1472,7 @@ Info (332114): Report Metastability: Found 21 synchronizer chains.
     Info (332114): Number of Synchronizer Chains Found: 21
     Info (332114): Shortest Synchronizer Chain: 2 Registers
     Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 0.381
-    Info (332114): Worst Case Available Settling Time: 37.049 ns
+    Info (332114): Worst Case Available Settling Time: 36.841 ns
     Info (332114): 
     Info (332114): Worst-Case MTBF values are calculated based on the worst-case silicon characteristics, with worst-case operating conditions.
     Info (332114):   - Under worst-case conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 1.8
@@ -1468,10 +1480,10 @@ Info (332114): Report Metastability: Found 21 synchronizer chains.
     Info (332114):   - Under typical conditions, an increase of 100ps in available settling time will increase MTBF values by a factor of 3.7
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
-Info: Quartus Prime Timing Analyzer was successful. 0 errors, 42 warnings
-    Info: Peak virtual memory: 4896 megabytes
-    Info: Processing ended: Thu Apr 20 15:54:51 2023
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:07
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 48 warnings
+    Info: Peak virtual memory: 4893 megabytes
+    Info: Processing ended: Thu Apr 20 17:59:33 2023
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:08
 
 

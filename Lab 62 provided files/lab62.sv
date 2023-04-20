@@ -163,12 +163,12 @@ logic [9:0] blankk;
 
 	assign  I2S_SCLK = ARDUINO_IO[5] ;
 	assign  I2S_LRCLK = ARDUINO_IO[4];
-//	assign ARDUINO_IO[2] = I2S_DIN;
-//	assign ARDUINO_IO[1] = I2S_DOUT;
+	assign ARDUINO_IO[2] = I2S_DIN;
+	assign ARDUINO_IO[1] = I2S_DOUT;
 	
 	// Feed Data In to Data Out (comment out unless testing codec)
-	assign ARDUINO_IO[1] = 1'bZ;
-	assign ARDUINO_IO[2] = ARDUINO_IO[1];
+//	assign ARDUINO_IO[1] = 1'bZ;
+//	assign ARDUINO_IO[2] = ARDUINO_IO[1];
 	
 	logic [1:0] aud_mclk_ctr;								// Straight from lecture slides
 	assign ARDUINO_IO[3] = aud_mclk_ctr[1];
@@ -221,6 +221,23 @@ logic [9:0] blankk;
 		.i2c_wire_scl_oe(I2C_SCLOE), 
 		
 	 );
+
+	 /////////////////////////////////////////////////////////////////////////////////////////
+	 /////////////////////////////////////////////////////////////////////////////////////////
+	 /////////////////////////////////////////////////////////////////////////////////////////
+	 /////////////////////////////////////////////////////////////////////////////////////////
+	 
+	 
+// I2S interface
+	i2s_interface i2s0 (
+		.I2S_LRCLK,
+		.I2S_SCLK,
+		.sample(),
+		.I2S_DIN
+	);
+	
+	
+
 
 
 

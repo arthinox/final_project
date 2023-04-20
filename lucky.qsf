@@ -252,6 +252,9 @@ set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity D
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name SYSTEMVERILOG_FILE waveforms/wave_generator.sv
+set_global_assignment -name SYSTEMVERILOG_FILE waveforms/square.sv
+set_global_assignment -name SYSTEMVERILOG_FILE waveforms/i2s.sv
 set_global_assignment -name QIP_FILE lab62_soc/synthesis/lab62_soc.qip
 set_global_assignment -name SYSTEMVERILOG_FILE keyboard_ctrl.sv
 set_global_assignment -name SYSTEMVERILOG_FILE HexDisplayConverter.sv
