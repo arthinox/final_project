@@ -41,13 +41,6 @@ module lab62 (
       output             DRAM_CAS_N,
       output             DRAM_RAS_N,
 
-      ///////// VGA /////////
-      output             VGA_HS,
-      output             VGA_VS,
-      output   [ 3: 0]   VGA_R,
-      output   [ 3: 0]   VGA_G,
-      output   [ 3: 0]   VGA_B,
-
 
       ///////// ARDUINO /////////
       inout    [15: 0]   ARDUINO_IO,
@@ -58,8 +51,8 @@ module lab62 (
 
 
 
-logic Reset_h, vssig, blank, sync, VGA_Clk;
-logic [9:0] blankk;
+logic Reset_h;
+logic [9:0] blank;
 
 
 
@@ -72,8 +65,6 @@ logic [9:0] blankk;
 	logic [3:0] hex_num_4, hex_num_3, hex_num_1, hex_num_0; //4 bit input hex digits
 	logic [1:0] signs;
 	logic [1:0] hundreds;
-	logic [9:0] drawxsig, drawysig, ballxsig, ballysig, ballsizesig;
-	logic [7:0] Red, Blue, Green;
 	logic [7:0] keycode;
 
 //=======================================================
@@ -212,7 +203,7 @@ logic [9:0] blankk;
 		
 		//LEDs and HEX
 		.hex_digits_export({hex_num_4, hex_num_3, hex_num_1, hex_num_0}),
-		.leds_export({hundreds, signs, blankk}),
+		.leds_export({hundreds, signs, blank}),
 		.keycode_export(keycode),
 		
 		.i2c_wire_sda_in(I2C_SDAIN),

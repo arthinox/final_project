@@ -1,7 +1,7 @@
 module keyboard_ctrl (
-	input [3:0] input1, input2,
-	input clk,
-	
+	input		clk,
+	input		[3:0] input1, input2,
+//	input		[1:0] oct_range,
 	output 	flat, instrument,
 	output	[2:0] note,
 	output	[2:0] octave
@@ -9,6 +9,9 @@ module keyboard_ctrl (
 );
 
 // Code that takes keyboard input and converts into data used by waveform generator
+
+//	4/25/23 Need to expand to support octave switching
+//				This means taking oct_range as input
 
 //////////////////////// INSTRUMENTS ////////////////////////
 
