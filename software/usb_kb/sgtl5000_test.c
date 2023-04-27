@@ -16,7 +16,7 @@
 #include "sgtl5000/GenericTypeDefs.h"
 #include "sgtl5000/sgtl5000.h"
 
-
+/*
 void setLED(int LED)
 {
 	IOWR_ALTERA_AVALON_PIO_DATA(LEDS_PIO_BASE, (IORD_ALTERA_AVALON_PIO_DATA(LEDS_PIO_BASE) | (0x001 << LED)));
@@ -179,4 +179,4 @@ int main()
 
 	return 0;
 }
-
+*/

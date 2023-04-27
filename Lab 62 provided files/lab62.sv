@@ -109,6 +109,23 @@ logic [9:0] blank;
 								.instrument(instrument1),
 								.note(note1),
 								.octave(octave1));
+								
+	fetch_sample fsample0 (
+								.I2S_LRCLK,
+								.note(6'b001011),
+								.sample
+							);
+
+logic [15:0] sample;
+// I2S interface
+	i2s_interface i2s0 (
+		.I2S_LRCLK,
+		.I2S_SCLK,
+		.sample,
+		.I2S_DIN
+	);
+	
+	
 	
 	// HDC numbers, notes, flat
 	HexDisplayConverter HDC5 (.In0(note1), .command(3'b000 + flat2), .Out0(HEX5[6:0]));
@@ -219,15 +236,7 @@ logic [9:0] blank;
 	 /////////////////////////////////////////////////////////////////////////////////////////
 	 
 	 
-// I2S interface
-	i2s_interface i2s0 (
-		.I2S_LRCLK,
-		.I2S_SCLK,
-		.sample(),
-		.I2S_DIN
-	);
-	
-	
+
 
 
 

@@ -8,6 +8,8 @@ module keyboard_ctrl (
 				
 );
 
+////////////////////////////// 61 MEANS NOTHING IS PRESSED
+
 // Code that takes keyboard input and converts into data used by waveform generator
 
 //	4/25/23 Need to expand to support octave switching

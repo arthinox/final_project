@@ -7,7 +7,7 @@
 <stringAttribute key="byteStreamDeviceInstanceID" value="0"/>
 <stringAttribute key="com.altera.sbtgui.launch.REMOTE_PORT" value="10443"/>
 <booleanAttribute key="downloadProgram" value="true"/>
-<stringAttribute key="elfFile" value="C:\Users\victor\Documents\GitHub\ECE385\final_project\software\usb_kb\usb_kb.elf"/>
+<stringAttribute key="elfFile" value="C:\Users\oddly\OneDrive\Documents\GitHub\final_project\software\usb_kb\usb_kb.elf"/>
 <stringAttribute key="org.eclipse.cdt.debug.mi.core.GDB_INIT" value=""/>
 <stringAttribute key="org.eclipse.cdt.debug.mi.core.commandFactory" value="com.altera.debug.cdi.gdb.plugin.Nios2GDBServerCommandFactory"/>
 <stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_ID" value="com.altera.debug.cdi.gdb.plugin.Nios2GdbCdiDebugger"/>

@@ -1,6 +1,6 @@
 module i2s_interface (
 	input I2S_LRCLK, I2S_SCLK,
-	input [31:0] sample,
+	input [15:0] sample,
 	output I2S_DIN
 );
 
@@ -27,7 +27,7 @@ logic [4:0] count;	// 5-bit counter (0-31)
 always_ff @ (posedge I2S_SCLK) begin
 	if (count == 0)
 		begin
-			shift_reg <= sample;
+			shift_reg <= {2'b00, sample, 14'b00000000000000};
 			count <= count + 1;
 		end
 	else

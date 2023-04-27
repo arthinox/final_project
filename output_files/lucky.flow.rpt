@@ -1,5 +1,5 @@
 Flow report for lucky
-Thu Apr 20 17:59:37 2023
+Thu Apr 27 17:26:54 2023
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,18 +40,18 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Apr 20 17:59:37 2023       ;
+; Flow Status                        ; Successful - Thu Apr 27 17:26:54 2023       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; lucky                                       ;
 ; Top-level Entity Name              ; lab62                                       ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 4,696 / 49,760 ( 9 % )                      ;
-;     Total combinational functions  ; 4,065 / 49,760 ( 8 % )                      ;
-;     Dedicated logic registers      ; 2,759 / 49,760 ( 6 % )                      ;
-; Total registers                    ; 2828                                        ;
-; Total pins                         ; 141 / 360 ( 39 % )                          ;
+; Total logic elements               ; 6,929 / 49,760 ( 14 % )                     ;
+;     Total combinational functions  ; 6,300 / 49,760 ( 13 % )                     ;
+;     Dedicated logic registers      ; 2,755 / 49,760 ( 6 % )                      ;
+; Total registers                    ; 2824                                        ;
+; Total pins                         ; 127 / 360 ( 35 % )                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 11,464 / 1,677,312 ( < 1 % )                ;
 ; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                             ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/20/2023 17:58:05 ;
+; Start date & time ; 04/27/2023 17:24:47 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; lucky               ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+-------------------------------------------------------------+---------------+-------------------+----------------+
 ; Assignment Name                     ; Value                                                       ; Default Value ; Entity Name       ; Section Id     ;
 +-------------------------------------+-------------------------------------------------------------+---------------+-------------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 238561869430156.168203148518476                             ; --            ; --                ; --             ;
+; COMPILER_SIGNATURE_ID               ; 273085300751603.168263428610008                             ; --            ; --                ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl                                           ; --            ; --                ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (SystemVerilog)                             ; <None>        ; --                ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                                        ; --            ; --                ; eda_simulation ;
@@ -112,12 +112,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:39     ; 1.0                     ; 4999 MB             ; 00:00:25                           ;
-; Fitter               ; 00:00:30     ; 1.4                     ; 5725 MB             ; 00:00:24                           ;
-; Assembler            ; 00:00:03     ; 1.0                     ; 4703 MB             ; 00:00:03                           ;
-; Timing Analyzer      ; 00:00:08     ; 2.1                     ; 4893 MB             ; 00:00:08                           ;
-; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 4734 MB             ; 00:00:02                           ;
-; Total                ; 00:01:23     ; --                      ; --                  ; 00:01:02                           ;
+; Analysis & Synthesis ; 00:01:02     ; 1.0                     ; 5060 MB             ; 00:00:59                           ;
+; Fitter               ; 00:00:41     ; 2.1                     ; 6740 MB             ; 00:01:02                           ;
+; Assembler            ; 00:00:04     ; 1.0                     ; 4712 MB             ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:07     ; 4.1                     ; 5078 MB             ; 00:00:21                           ;
+; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 4777 MB             ; 00:00:03                           ;
+; Total                ; 00:01:57     ; --                      ; --                  ; 00:02:28                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -126,11 +126,11 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; DESKTOP-3PP53FB  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; DESKTOP-3PP53FB  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; DESKTOP-3PP53FB  ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; DESKTOP-3PP53FB  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-3PP53FB  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-MPRNBE8  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-MPRNBE8  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-MPRNBE8  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-MPRNBE8  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-MPRNBE8  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 

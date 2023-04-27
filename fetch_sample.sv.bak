@@ -1,0 +1,17 @@
+module fetch_sample (
+	input I2S_LRCLK,
+//	input 
+	output [15:0] sample
+);
+
+logic [15:0] rom [6006];
+
+always_ff @(posedge clk) begin
+	q <= rom[addr];
+end
+
+logic c2_start, d_2_start, d2_start, e_2_start, e2_start, f2_start, g_2_start, a_2_start, a2_start, b_2_start, b2_start;
+
+
+initial begin $readmemh("combined_notes.txt", rom); end
+endmodule
